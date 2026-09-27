@@ -166,6 +166,9 @@ unredacted financial details.
 
 ## 6. New repository and GitHub Pages: readiness checklist
 
+For the complete, ordered procedure see the
+[installation guide](installation.md).
+
 The current deployment configuration and bootstrap scripts still identify
 `GithubDay`; **copying them into another repository is not sufficient**.
 Before any new deployment: replace repository identifiers and OIDC federated

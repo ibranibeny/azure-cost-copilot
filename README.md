@@ -119,6 +119,12 @@ auto‑deploys and runs the E2E suites; a green deploy opens a `staging → main
 commit from the merge's second parent. All Azure access is **OIDC only** — no
 client secrets or registry passwords anywhere.
 
+## Installing it
+
+See **[docs/installation.md](docs/installation.md)** for a step-by-step
+installation from Azure Cloud Shell into this repository, including the
+one-time container app configuration that no script performs.
+
 ## Operating it
 
 See **[docs/workshop-runbook.md](docs/workshop-runbook.md)** for the end‑to‑end
