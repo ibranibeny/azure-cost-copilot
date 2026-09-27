@@ -27,6 +27,8 @@
       .button { display: inline-block; padding: .65rem 1rem; border-radius: .4rem; background: #005a9e; color: white; font-weight: 600; text-decoration: none; }
       .button:hover { background: #00477d; }
       footer { border-top: 1px solid #cfdae7; margin-top: 2.5rem; padding-top: 1rem; color: #43546a; }
+      .architecture { margin-top: 2.5rem; }
+      .architecture img { width: 100%; height: auto; background: white; border: 1px solid #cfdae7; border-radius: .75rem; }
     </style>
   </head>
   <body>
@@ -53,8 +55,8 @@
         </section>
         <section class="card">
           <h2>Architecture diagram</h2>
-          <p>Open the editable draw.io source for workload and platform boundaries.</p>
-          <a class="button" href="architecture.drawio">Get the diagram</a>
+          <p>Landing-zone-aligned SVG with Azure service icons; opens editable in draw.io.</p>
+          <a class="button" href="architecture.drawio.svg">Open the SVG</a>
         </section>
         <section class="card">
           <h2>Cost dashboard</h2>
@@ -62,6 +64,14 @@
           <a class="button" href="https://azurecost.contoso.day/" rel="noopener noreferrer">Open dashboard</a>
         </section>
       </div>
+      <section class="architecture" id="architecture">
+        <h2>Architecture</h2>
+        <p>The workload is an application landing zone under <em>Landing zones › Online</em>. Solid blue
+          resources are provisioned by this repository; dashed amber services belong to the platform
+          landing zone and must be agreed with the platform team.</p>
+        <a href="architecture.drawio.svg"><img src="architecture.drawio.svg"
+          alt="Azure Cost Copilot architecture: platform landing zone (Entra ID identity, management and connectivity targets), management-group placement under Landing zones Online, and the application landing zone with Front Door Premium, Container Registry, staging and production Container Apps environments over Private Link, Cost Management and Microsoft Foundry."></a>
+      </section>
       <footer>
         <p>The documentation site does not replace the FastAPI service, Front Door routing or Azure identity controls.</p>
       </footer>

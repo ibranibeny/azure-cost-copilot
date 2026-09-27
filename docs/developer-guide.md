@@ -8,9 +8,12 @@ title: Azure Cost Copilot developer guide
 This guide describes the **implementation in this checkout**. It is not a claim
 that a new GitHub repository or a new Azure environment has been provisioned.
 For the existing deployment operator sequence, use the
-[workshop runbook](workshop-runbook.md). The editable
-[architecture diagram](architecture.drawio) distinguishes implemented resources
-from the proposed application-landing-zone integration.
+[workshop runbook](workshop-runbook.md). The
+[architecture diagram](architecture.drawio.svg) — an SVG with Azure service
+icons that also opens editable in draw.io — distinguishes resources this
+repository provisions from the platform landing-zone integration.
+
+![Azure Cost Copilot architecture aligned with Azure landing zones](architecture.drawio.svg)
 
 ## 1. Architecture and trust boundaries
 

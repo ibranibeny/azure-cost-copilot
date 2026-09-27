@@ -17,18 +17,11 @@ same cost figures the charts render, with the evidence attached.
 
 ## Architecture
 
-```
-            Browser (Entra ID sign-in, MSAL)
-                     │  https
-              Azure Front Door (Premium)
-        /api/*, /health/*  │        │  /*
-                 ┌─────────┘        └─────────┐
-      backend Container App            frontend Container App
-      (FastAPI, user-assigned MI)      (nginx-served SPA)
-             │                                  
-   Cost Management  ── Foundry (configured model, eastus2)
-             └── Application Insights / Azure Monitor / Log Analytics
-```
+[![Azure Cost Copilot architecture aligned with Azure landing zones](docs/architecture.drawio.svg)](docs/architecture.drawio.svg)
+
+The workload is an **application landing zone** under *Landing zones › Online*;
+identity, management and connectivity belong to the centrally owned
+**platform landing zone**. The SVG opens editable in draw.io.
 
 - **Front Door Premium** fronts **two Azure Container Apps environments**,
   **staging** and **production**, both in **`indonesiacentral`**, reached over
@@ -44,10 +37,8 @@ same cost figures the charts render, with the evidence attached.
   The current configuration selects `gpt-5.4-mini`; the model is not chosen by
   the browser.
 
-For the implementation-level request path, operational boundaries and an
-editable landing-zone-aware draw.io view, see the
-[developer guide](docs/developer-guide.md) and
-[architecture diagram](docs/architecture.drawio).
+For the implementation-level request path and operational boundaries, see the
+[developer guide](docs/developer-guide.md).
 The [static documentation landing page](docs/index.html) is prepared for a
 GitHub Pages branch source rooted at `docs/`. It links to the existing
 authenticated dashboard; it does not host cost data or run the API.
