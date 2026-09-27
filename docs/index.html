@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Azure Cost Copilot | Documentation</title>
+    <style>
+      :root {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: #14263d;
+        background: #f3f7fb;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; line-height: 1.55; }
+      a { color: #005a9e; }
+      a:focus-visible { outline: 3px solid #005a9e; outline-offset: 4px; }
+      header { background: #102e4f; color: white; padding: 2.5rem max(1.25rem, calc((100vw - 68rem) / 2)); }
+      header p { color: #dcebf8; max-width: 44rem; }
+      h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.15; }
+      main { max-width: 68rem; margin: auto; padding: 2rem 1.25rem 4rem; }
+      .notice { border-left: 5px solid #996200; background: #fff6df; padding: 1rem 1.25rem; margin-bottom: 2rem; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+      .card { background: white; border: 1px solid #cfdae7; border-radius: .75rem; padding: 1.5rem; }
+      .card h2 { margin-top: 0; font-size: 1.35rem; }
+      .card p { min-height: 3.5rem; }
+      .button { display: inline-block; padding: .65rem 1rem; border-radius: .4rem; background: #005a9e; color: white; font-weight: 600; text-decoration: none; }
+      .button:hover { background: #00477d; }
+      footer { border-top: 1px solid #cfdae7; margin-top: 2.5rem; padding-top: 1rem; color: #43546a; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Azure Cost Copilot</h1>
+      <p>Architecture, developer guidance and an entry point to the authenticated cost dashboard.</p>
+    </header>
+    <main>
+      <div class="notice">
+        <strong>Access boundary:</strong> This page is static documentation. Cost figures and chat
+        are not hosted here. The dashboard opens at its existing address and requires authorized
+        Microsoft Entra sign-in. Do not publish screenshots or live cost data on a public site.
+      </div>
+      <div class="cards">
+        <section class="card">
+          <h2>Developer guide</h2>
+          <p>Trace authentication, cost queries, chat grounding, releases and operations.</p>
+          <a class="button" href="developer-guide.html">Read the guide</a>
+        </section>
+        <section class="card">
+          <h2>Architecture diagram</h2>
+          <p>Open the editable draw.io source for workload and platform boundaries.</p>
+          <a class="button" href="architecture.drawio">Get the diagram</a>
+        </section>
+        <section class="card">
+          <h2>Cost dashboard</h2>
+          <p>Open the existing hosted application. Sign-in and permissions still apply.</p>
+          <a class="button" href="https://azurecost.contoso.day/" rel="noopener noreferrer">Open dashboard</a>
+        </section>
+      </div>
+      <footer>
+        <p>The documentation site does not replace the FastAPI service, Front Door routing or Azure identity controls.</p>
+      </footer>
+    </main>
+  </body>
+</html>
